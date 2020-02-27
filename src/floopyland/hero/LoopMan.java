@@ -3,17 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package floopyland.items;
-
-import com.pauliankline.floopyconnector.Item;
+package floopyland.hero;
 
 /**
  *
  * @author ramsey.kerley
  */
-public class BoardItems extends Item {
-
-    public BoardItems(String name) {
-        super(name);
-    }
+public class LoopMan {
+    
 }

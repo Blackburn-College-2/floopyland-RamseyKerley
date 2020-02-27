@@ -5,15 +5,13 @@
  */
 package floopyland.items;
 
-import com.pauliankline.floopyconnector.Item;
-
 /**
  *
  * @author ramsey.kerley
  */
-public class BoardItems extends Item {
+public class HealthPotion extends BoardItems {
 
-    public BoardItems(String name) {
-        super(name);
+    public HealthPotion() {
+        super("Health vial");
     }
 }

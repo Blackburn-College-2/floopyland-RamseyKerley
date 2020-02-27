@@ -6,8 +6,9 @@
 package floopyland;
 
 /**
+ * I believe it will take a little over 12 hours to finish the project
  *
- * @author paul.kline
+ * @author Ramsey
  */
 public class Main {
 
@@ -16,7 +17,7 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
+
     }
-    
+
 }

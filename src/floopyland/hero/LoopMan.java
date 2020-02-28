@@ -5,10 +5,15 @@
  */
 package floopyland.hero;
 
+import com.pauliankline.floopyconnector.GameBoard;
+import java.awt.Point;
+
 /**
  *
  * @author ramsey.kerley
  */
-public class LoopMan {
-    
+public class LoopMan extends Hero {
+    public LoopMan(GameBoard gameboard, Point place){
+        super(gameboard, place);
+    }
 }

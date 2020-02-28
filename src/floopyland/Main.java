@@ -5,6 +5,9 @@
  */
 package floopyland;
 
+import com.pauliankline.floopyconnector.Floopy;
+import floopyland.gamecontroller.GameControl;
+
 /**
  * I believe it will take a little over 12 hours to finish the project
  *
@@ -17,7 +20,8 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-
+        Floopy floop = new Floopy(new GameControl());
+        floop.begin(5);
     }
-
+    
 }

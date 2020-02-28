@@ -37,12 +37,14 @@ public class Hero extends BaseHero {
 
     @Override
     protected void die() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+      
+        super.location = null;
+    
     }
 
     @Override
     public boolean isDead() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return super.hp <= 0;
     }
 
 }

@@ -15,36 +15,40 @@ import java.awt.Point;
  */
 public class Hero extends BaseHero {
 
-    public Hero(GameBoard gameBoard, Point place) {
-        super(gameBoard, place);
+    public Hero(GameBoard game, Point place) {
+        super(game, place);
+        super.color = "blue";
+        boolean addHero = game.getGameSquare(place).addHero(this);
+        System.out.println(addHero);
 
     }
 
     @Override
     public boolean isInBattle() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return false;
     }
 
     @Override
     public String enemy() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return "hero";
     }
 
     @Override
     public void gameTickAction(long arg0) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
 
     @Override
     protected void die() {
       
-        super.location = null;
+        //super.location = null;
     
     }
 
     @Override
     public boolean isDead() {
-        return super.hp <= 0;
+        //return super.hp <= 0;
+        return false;
     }
 
 }

@@ -19,7 +19,7 @@ public class Healers extends Hero{
      * @param gameboard
      * @param place
      */
-    public Healers(GameBoard gameboard, Point place){
-        super(gameboard, place);
+    public Healers(GameBoard game, Point place){
+        super(game, place);
     }
 }

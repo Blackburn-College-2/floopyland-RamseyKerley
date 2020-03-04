@@ -21,5 +21,7 @@ public class Ninjas extends Hero {
      */
     public Ninjas(GameBoard gameboard, Point place) {
         super(gameboard, place);
+        super.color = "Yellow";
+        super.name = "Sneek snak";
     }
 }

@@ -21,5 +21,8 @@ public class Tankers extends Hero{
      */
     public Tankers(GameBoard gameboard, Point place){
         super(gameboard, place);
+        super.color = "orange";
+        super.hp = 1500+1;
+        super.name = "Rhino";
     }
 }

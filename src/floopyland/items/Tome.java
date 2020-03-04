@@ -13,5 +13,6 @@ public class Tome extends BoardItems {
 
     public Tome() {
         super("Tome of misdirection");
+        super.color = "brown";
     }
 }

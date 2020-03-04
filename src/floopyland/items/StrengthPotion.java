@@ -13,5 +13,6 @@ public class StrengthPotion extends BoardItems {
 
     public StrengthPotion() {
         super("Strength booster");
+        super.color = "yellow";
     }
 }

@@ -13,5 +13,6 @@ public class HealthPotion extends BoardItems {
 
     public HealthPotion() {
         super("Health vial");
+        super.color = "red";
     }
 }

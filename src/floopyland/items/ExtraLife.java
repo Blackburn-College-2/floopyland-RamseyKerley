@@ -13,5 +13,7 @@ public class ExtraLife extends BoardItems {
 
     public ExtraLife() {
         super("Extra Life");
+        super.color = "green";
     }
+    
 }

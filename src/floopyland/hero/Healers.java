@@ -16,10 +16,12 @@ public class Healers extends Hero{
 
     /**
      *
-     * @param gameboard
+     * @param game
      * @param place
      */
     public Healers(GameBoard game, Point place){
         super(game, place);
+        super.color = "red";
+        super.name = "Healer Man";
     }
 }

@@ -17,14 +17,14 @@ public class Hero extends BaseHero {
 
     public Hero(GameBoard game, Point place) {
         super(game, place);
-        super.color = "blue";
         boolean addHero = game.getGameSquare(place).addHero(this);
-        System.out.println(addHero);
+        //System.out.println(addHero);
 
     }
 
     @Override
     public boolean isInBattle() {
+       
         return false;
     }
 
@@ -40,15 +40,26 @@ public class Hero extends BaseHero {
 
     @Override
     protected void die() {
-      
+
         //super.location = null;
-    
     }
 
     @Override
     public boolean isDead() {
         //return super.hp <= 0;
         return false;
+    }
+    
+    /**
+     * This take the hero off the board and place it in a new location in one of the cardinal directions
+     * around it's current location.
+     * @return the new location
+     */
+    public Point move(){
+       super.gameboard.getGameSquare(this.location).removeHero(this);
+       this.location = new Point(69,69);
+       super.gameboard.getGameSquare(this.location).addHero(this);
+       return new Point();
     }
 
 }

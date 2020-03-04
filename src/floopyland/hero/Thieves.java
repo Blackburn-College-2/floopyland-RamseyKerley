@@ -21,5 +21,7 @@ public class Thieves extends Hero{
      */
     public Thieves(GameBoard gameboard, Point place){
         super(gameboard, place);
+        super.color = "Green";
+        super.name = "Pockets out";
     }
 }

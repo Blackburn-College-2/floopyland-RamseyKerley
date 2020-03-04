@@ -21,5 +21,7 @@ public class Soldiers extends Hero {
      */
     public Soldiers(GameBoard gameboard, Point place) {
         super(gameboard, place);
+        super.name = "John Fortnight";
+        super.color = "purple";
     }
 }

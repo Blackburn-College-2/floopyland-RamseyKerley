@@ -15,5 +15,7 @@ import java.awt.Point;
 public class LoopMan extends Hero {
     public LoopMan(GameBoard gameboard, Point place){
         super(gameboard, place);
+        super.color = "Pink";
+        super.name = "Hit hit";
     }
 }

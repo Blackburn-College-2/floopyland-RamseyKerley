@@ -7,6 +7,7 @@ package floopyland.gamecontroller;
 
 import com.pauliankline.floopyconnector.*;
 import floopyland.hero.*;
+import floopyland.items.*;
 import java.awt.Point;
 import java.util.ArrayList;
 import java.util.Random;
@@ -20,16 +21,15 @@ public class GameControl extends GameController {
     @Override
     public ArrayList<BaseHero> createHeroes(GameBoard arg0, int arg1) {
         // System.out.println("Rzn");
-        Random rand = new Random();
-
-        ArrayList<BaseHero> heroArray = new ArrayList<>();
-        heroArray.add(new Healers(arg0, new Point(rand.nextInt(arg0.getWidth()), rand.nextInt(arg0.getHeight()))));
-        heroArray.add(new Tankers(arg0, new Point(rand.nextInt(arg0.getWidth()), rand.nextInt(arg0.getHeight()))));
-        heroArray.add(new Ninjas(arg0, new Point(rand.nextInt(arg0.getWidth()), rand.nextInt(arg0.getHeight()))));
-        heroArray.add(new Thieves(arg0, new Point(rand.nextInt(arg0.getWidth()), rand.nextInt(arg0.getHeight()))));
-        heroArray.add(new LoopMan(arg0, new Point(rand.nextInt(arg0.getWidth()), rand.nextInt(arg0.getHeight()))));
-
-        return heroArray;
+          Random rand = new Random();
+        ArrayList<BaseHero> heroOnBoard = new ArrayList<>();
+        for (int i = 0; i < arg1; i++) {
+            heroOnBoard.add(randomHero(arg0));
+        }
+ 
+        
+         
+        return heroOnBoard;
     }
 
     @Override
@@ -38,4 +38,55 @@ public class GameControl extends GameController {
         return gB;
     }
 
+    /**
+     * this makes a random hero and returns it
+     *
+     * @param arg0
+     * @return BaseHero
+     */
+    public BaseHero randomHero(GameBoard arg0) {
+        Random rand = new Random();
+        int x = rand.nextInt(6);
+
+        switch (x) {
+            case 0:
+                return new Healers(arg0, new Point(rand.nextInt(arg0.getWidth()), rand.nextInt(arg0.getHeight())));
+            case 1:
+                return new Tankers(arg0, new Point(rand.nextInt(arg0.getWidth()), rand.nextInt(arg0.getHeight())));
+            case 2:
+                return new Ninjas(arg0, new Point(rand.nextInt(arg0.getWidth()), rand.nextInt(arg0.getHeight())));
+            case 3:
+                return new Thieves(arg0, new Point(rand.nextInt(arg0.getWidth()), rand.nextInt(arg0.getHeight())));
+            case 4:
+                return new LoopMan(arg0, new Point(rand.nextInt(arg0.getWidth()), rand.nextInt(arg0.getHeight())));
+            case 5:
+                return new Soldiers(arg0, new Point(rand.nextInt(arg0.getWidth()), rand.nextInt(arg0.getHeight())));
+            default:
+                break;
+        }
+        return null;
+    }
+    
+    
+    public BoardItems randomItems() {
+        Random rand = new Random();
+        int x = rand.nextInt(4);
+
+        switch (x) {
+            case 0:
+                return new HealthPotion();
+            case 1:
+                return new Tome();
+            case 2:
+                return new ExtraLife();
+            case 3:
+                return new StrengthPotion();
+            default:
+                break;
+        }
+        return null;
+    }
+
 }
+
+

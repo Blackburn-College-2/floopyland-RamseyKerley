@@ -40,24 +40,43 @@ public class Hero extends BaseHero {
 
     @Override
     protected void die() {
-
-        //super.location = null;
+        if(isDead()){
+        super.location = null;
+        }
     }
 
     @Override
     public boolean isDead() {
-        //return super.hp <= 0;
-        return false;
+        return super.hp <= 0;
     }
     
     /**
      * This take the hero off the board and place it in a new location in one of the cardinal directions
      * around it's current location.
+     * @param gb
      * @return the new location
      */
-    public Point move(){
+    public Point move(GameBoard gb){
        super.gameboard.getGameSquare(this.location).removeHero(this);
-       this.location = new Point(69,69);
+       while(!isInBattle()){
+           if(location.x == gb.getWidth() ){
+               
+               if( location.y == gb.getHeight()){
+                   
+               }
+           
+           }else if(Math.random()*3 +1 == 1){
+               
+           }else if(Math.random()*3 +1 == 2){
+               
+           }else if(Math.random()*3 +1 == 3){
+               
+           }else if(Math.random()*3 +1 == 4){
+               
+           }
+               
+           
+           }
        super.gameboard.getGameSquare(this.location).addHero(this);
        return new Point();
     }

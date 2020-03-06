@@ -15,5 +15,6 @@ public class BoardItems extends Item {
 
     public BoardItems(String name) {
         super(name);
+        
     }
 }

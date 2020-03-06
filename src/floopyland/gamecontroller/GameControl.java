@@ -26,6 +26,9 @@ public class GameControl extends GameController {
         for (int i = 0; i < arg1; i++) {
             heroOnBoard.add(randomHero(arg0));
         }
+         for (int i = 0; i < 6; i++) {
+            arg0.getGameSquare(new Point (rand.nextInt(arg0.getWidth()), rand.nextInt(arg0.getHeight()))).addItem(randomItems());
+        }
  
         
          

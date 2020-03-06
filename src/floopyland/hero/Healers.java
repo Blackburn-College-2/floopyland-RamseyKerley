@@ -23,5 +23,6 @@ public class Healers extends Hero{
         super(game, place);
         super.color = "red";
         super.name = "Healer Man";
+        
     }
 }
